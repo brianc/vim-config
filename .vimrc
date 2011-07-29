@@ -1,9 +1,17 @@
+set nocompatible " must be first line
 filetype plugin on
 filetype indent on
 
+let s:is_win = has('win32')
+
+runtime! autoload/pathogen.vim
+silent! call pathogen#helptags()
+silent! call pathogen#runtime_append_all_bundles()
+
+
+
 let mapleader = ","
 let g:mapleader = ","
-
 set visualbell
 
 " Fast saving
@@ -50,13 +58,13 @@ set noswapfile
 
 "Persistent undo
 try
-    if has('win32')
-      set undodir=C:\Windows\Temp
-    else
-      set undodir=~/.vim_runtime/undodir
-    endif
+  if has('win32')
+    set undodir=C:\Windows\Temp
+  else
+    set undodir=~/.vim_runtime/undodir
+  endif
 
-    set undofile
+  set undofile
 catch
 endtry
 
@@ -70,8 +78,8 @@ if has("gui_running")
   " set guioptions-=m
   set t_Co=256
   set background=dark
-  colorscheme desert
   set nonu
+  colorscheme desert
   if has('win32')
     set guifont=Consolas:h13
   endif
@@ -84,7 +92,7 @@ endif
 
 set encoding=utf8
 try
-    lang en_US
+  lang en_US
 catch
 endtry
 
@@ -164,16 +172,16 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ 
 
 
 function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
-    return curdir
+  let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
+  return curdir
 endfunction
 
 function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    else
-        return ''
-    endif
+  if &paste
+    return 'PASTE MODE  '
+  else
+    return ''
+  endif
 endfunction
 
 imap <c-a> <esc>0i
@@ -186,3 +194,6 @@ map <leader>pp :setlocal paste!<cr>
 
 au BufNewFile,BufRead *.aspx.cs set ft=html
 au BufNewFile,BufRead *.aspx set ft=html
+
+" Plugins {
+" }
