@@ -3,6 +3,7 @@ filetype plugin on
 filetype indent on
 
 let s:is_win = has('win32')
+let s:is_mac = has('mac')
 
 runtime! autoload/pathogen.vim
 silent! call pathogen#helptags()
@@ -83,6 +84,9 @@ if has("gui_running")
   if has('win32')
     set guifont=Consolas:h13
   endif
+  if s:is_mac
+    set guifont=Menlo:h15
+  end
 else
   colorscheme zellner
   set background=dark
