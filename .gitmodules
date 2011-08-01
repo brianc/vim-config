@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/vim-javascript"]
 	path = .vim/bundle/vim-javascript
 	url = git://github.com/pangloss/vim-javascript.git
+[submodule ".vim/bundle/vim-fugative"]
+	path = .vim/bundle/vim-fugative
+	url = https://github.com/tpope/vim-fugitive
