@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/lusty"]
 	path = .vim/bundle/lusty
 	url = https://github.com/sjbach/lusty
+[submodule ".vim/bundle/snipmate.vim"]
+	path = .vim/bundle/snipmate.vim
+	url = https://github.com/brianc/snipmate.vim
