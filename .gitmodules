@@ -10,3 +10,9 @@
 [submodule ".vim/bundle/vim-fugative"]
 	path = .vim/bundle/vim-fugative
 	url = https://github.com/tpope/vim-fugitive
+[submodule ".vim/bundle/headlights"]
+	path = .vim/bundle/headlights
+	url = https://github.com/mbadran/headlights
+[submodule ".vim/bundle/lusty"]
+	path = .vim/bundle/lusty
+	url = https://github.com/sjbach/lusty
