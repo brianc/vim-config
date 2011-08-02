@@ -190,6 +190,8 @@ endfunction
 
 imap <c-a> <esc>0i
 imap <c-f> <right>
+imap kj <esc>
+imap <C-BS> <C-W>
 """" 
 " MISC
 "
