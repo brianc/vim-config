@@ -121,7 +121,7 @@ set wrap "Wrap lines
 set list
 set listchars=trail:.
 
- Specify the behavior when switching between buffers
+ " Specify the behavior when switching between buffers
 try
   set switchbuf=usetab
   set stal=2
