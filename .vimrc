@@ -15,10 +15,6 @@ let mapleader = ","
 let g:mapleader = ","
 set visualbell
 
-" Fast saving
-"
-nmap <leader>w :w!<cr>
-
 set history=700
 set ruler "Always show current position
 set hid "Change buffer - without saving
@@ -117,47 +113,6 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-"""""""
-" Command mode
-"
-" Smart mappings on the command line
-cno $h e ~/
-cno $d e ~/Desktop/
-cno $j e ./
-cno $c <C-\>eCurrentFileDir("e")<cr>
-
-" Bash like keys for the command line
-
-"""""""""""""""""""""""""""""""""
-" Moving around, tabs and buffers
-""""""""""""""""""""""""""""""""
-
-" Map space to / (search) and c-space to ? (backwards search)
-map <space> /
-map <c-space> ?
-map <silent> <leader><cr> :noh<cr>
-
-" smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
-
-" Use the arrows to something useful
-map <right> :tabnext<cr>
-map <left> :tabprevious<cr>
-
-
-" Tab configuration
-map <leader>tn :tabnew<cr>
-map <leader>te :tabedit<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove<cr>
-
-" When pressing <leader>cd switch to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>
-
-
 " Specify the behavior when switching between buffers
 try
   set switchbuf=usetab
@@ -180,18 +135,47 @@ function! CurDir()
   return curdir
 endfunction
 
-imap <c-a> <esc>0i
-imap <c-f> <right>
-imap kj <esc>
-imap <C-BS> <C-W>
-"""" 
-" MISC
-"
+" FileTypes {
+  au BufNewFile,BufRead *.aspx.cs set ft=html
+  au BufNewFile,BufRead *.aspx set ft=html
+" }
 
-map <leader>pp :setlocal paste!<cr>
+" KeyMap {
+  imap <c-a> <esc>0i
+  imap <c-f> <right>
+  imap kj <esc>
+  imap <C-BS> <C-W>
 
-au BufNewFile,BufRead *.aspx.cs set ft=html
-au BufNewFile,BufRead *.aspx set ft=html
+  " Map space to / (search) and c-space to ? (backwards search)
+  map <space> /
+  map <c-space> ?
+  map <silent> <leader><cr> :noh<cr>
+
+  " smart way to move between windows
+  map <C-j> <C-W>j
+  map <C-k> <C-W>k
+  map <C-h> <C-W>h
+  map <C-l> <C-W>l
+
+  " Use the arrows to something useful
+  map <right> :tabnext<cr>
+  map <left> :tabprevious<cr>
+
+  " Tab configuration
+  map <leader>tn :tabnew<cr>
+  map <leader>te :tabedit<cr>
+  map <leader>tc :tabclose<cr>
+  map <leader>tm :tabmove<cr>
+
+  " When pressing <leader>cd switch to the directory of the open buffer
+  map <leader>cd :cd %:p:h<cr>
+" }
 
 " Plugins {
+  " Lusty {
+    nmap <leader>b :LustyBufferExplorer<cr>
+    nmap <leader>j :LustyJuggler<cr>
+    nmap <leader>f :LustyFilesystemExplorer<cr>
+    nmap <leader>F :LustyFilesystemExplorerFromHere<cr>
+  " }
 " }
