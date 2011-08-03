@@ -144,8 +144,8 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 
 " Use the arrows to something useful
-map <right> :bn<cr>
-map <left> :bp<cr>
+map <right> :tabnext<cr>
+map <left> :tabprevious<cr>
 
 
 " Tab configuration
