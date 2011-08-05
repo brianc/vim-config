@@ -83,6 +83,11 @@ if has("gui_running")
   if s:is_mac
     set guifont=Menlo:h15
   end
+  if has('unix')
+    set guifont=Inconsolata\ 17
+    set lines=999
+    set columns=999
+  end
 else
   colorscheme zellner
   set background=dark
