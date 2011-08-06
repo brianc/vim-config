@@ -40,7 +40,6 @@ set gdefault					" the /g flag on :s substitutions by default
 
 " No sound on errors
 set noerrorbells
-set novisualbell
 set t_vb=
 set tm=500
 
@@ -79,11 +78,11 @@ if has("gui_running")
   colorscheme desert
   if has('win32')
     set guifont=Consolas:h13
-  endif
-  if s:is_mac
+  elseif s:is_mac
     set guifont=Menlo:h15
-  end
-  if has('unix')
+    set lines=999
+    set columns=999
+  elseif has('unix')
     set guifont=Inconsolata\ 17
     set lines=999
     set columns=999
