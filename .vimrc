@@ -84,8 +84,6 @@ if has("gui_running")
     set columns=999
   elseif has('unix')
     set guifont=Inconsolata\ 17
-    set lines=999
-    set columns=999
   end
 else
   colorscheme zellner
