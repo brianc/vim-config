@@ -84,9 +84,12 @@ if has("gui_running")
   colorscheme desert
   if has('win32')
     set guifont=Consolas:h13
-  endif
-  if s:is_mac
+  elseif s:is_mac
     set guifont=Menlo:h15
+    set lines=999
+    set columns=999
+  elseif has('unix')
+    set guifont=Inconsolata\ 17
   end
 else
   colorscheme zellner
