@@ -118,8 +118,8 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-set list
-set listchars=trail:.
+" set list
+" set listchars=trail:.
 
  " Specify the behavior when switching between buffers
 try
