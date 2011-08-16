@@ -43,6 +43,12 @@ set noerrorbells
 set t_vb=
 set tm=500
 
+set wildmenu
+set viminfo='100,f1 " save global arks upon exit
+set viewoptions=folds,options,cursor,unix,slash " better unix / windows compat
+set shortmess+=filmnrxoOtT "abbrev. of messages (avioids 'hit enter')
+set showmode
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -104,7 +110,10 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-" Specify the behavior when switching between buffers
+" set list
+" set listchars=trail:.
+
+ " Specify the behavior when switching between buffers
 try
   set switchbuf=usetab
   set stal=2
@@ -163,6 +172,10 @@ endfunction
 
   " When pressing <leader>cd switch to the directory of the open buffer
   map <leader>cd :cd %:p:h<cr>
+
+  " visual shifting (does not exit Visual mode)
+  vnoremap < <gv
+  vnoremap > >gv
 " }
 
 " Plugins {
