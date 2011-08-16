@@ -145,9 +145,6 @@ endfunction
   imap <c-f> <right>
   imap kj <esc>
   imap <C-BS> <C-W>
-  imap ( ()<esc>i
-  imap [ []<esc>i
-  imap { {}<esc>i
 
   " Map space to / (search) and c-space to ? (backwards search)
   map <space> /
