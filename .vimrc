@@ -193,4 +193,7 @@ endfunction
     nmap <leader>f :LustyFilesystemExplorer<cr>
     nmap <leader>F :LustyFilesystemExplorerFromHere<cr>
   " }
+  " NerdTree {
+    nmap <leader>t :NERDTreeToggle<cr>
+  " }
 " }
