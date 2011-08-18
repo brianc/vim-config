@@ -168,7 +168,7 @@ endfunction
   map <leader>tm :tabmove<cr>
 
   " When pressing <leader>cd switch to the directory of the open buffer
-  map <leader>cd :cd %:p:h<cr>
+  map <leader>cd :lcd %:p:h<cr>
 
   " visual shifting (does not exit Visual mode)
   vnoremap < <gv
