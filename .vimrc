@@ -58,18 +58,6 @@ set nobackup
 set nowb
 set noswapfile
 
-"Persistent undo
-try
-  if has('win32')
-    set undodir=C:\Windows\Temp
-  else
-    set undodir=~/.vim_runtime/undodir
-  endif
-
-  set undofile
-catch
-endtry
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -90,6 +78,7 @@ if has("gui_running")
     set columns=999
   elseif has('unix')
     set guifont=Inconsolata\ 17
+    set novisualbell
   end
 else
   colorscheme zellner
@@ -104,7 +93,7 @@ try
 catch
 endtry
 
-set ffs=unix,dos,mac "Default file types
+" set ffs=unix,dos,mac "Default file types
 
 """"""""""""""""""""""""""""""""
 "  Text, tab and indent
