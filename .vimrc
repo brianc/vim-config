@@ -73,7 +73,7 @@ if has("gui_running")
   if has('win32')
     set guifont=Consolas:h13
   elseif s:is_mac
-    set guifont=Menlo:h15
+    set guifont=Menlo:h16
     set lines=999
     set columns=999
   elseif has('unix')
