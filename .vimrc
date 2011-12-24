@@ -142,6 +142,7 @@ endfunction
 " FileTypes {
   au BufNewFile,BufRead *.aspx.cs set ft=html
   au BufNewFile,BufRead *.aspx set ft=html
+  au BufNewFile,BufRead *.coffee set ft=coffee
 " }
 
 " KeyMap {
