@@ -58,6 +58,10 @@ set nobackup
 set nowb
 set noswapfile
 
+" Automatically safe files when switchin between them / leaving vim
+set autowriteall
+autocmd FocusLost * silent! :wa
+autocmd TabLeave * silent! :wa
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
