@@ -223,13 +223,13 @@ endfunction
 " }
 
 " Plugins {
-" Lusty {
-nmap <leader>b :LustyBufferExplorer<cr>
-nmap <leader>j :LustyJuggler<cr>
-nmap <leader>f :LustyFilesystemExplorer<cr>
-nmap <leader>F :LustyFilesystemExplorerFromHere<cr>
-" }
-" NerdTree {
-nmap <leader>t :NERDTreeToggle<cr>
-" }
+  " Lusty {
+    nmap <leader>b :LustyBufferExplorer<cr>
+    nmap <leader>j :LustyJuggler<cr>
+    nmap <leader>f :LustyFilesystemExplorer<cr>
+    nmap <leader>F :LustyFilesystemExplorerFromHere<cr>
+  " }
+  " NerdTree {
+    nmap <leader>t :NERDTreeToggle<cr>
+  " }
 " }
