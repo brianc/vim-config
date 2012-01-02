@@ -221,6 +221,10 @@ endfunction
     endif
   endf
 " }
+" autosave (potentially dangerous) {
+  :set autowriteall
+  :au FocusLost * silent! wa
+" }
 
 " Plugins {
   " Lusty {
