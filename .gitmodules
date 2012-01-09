@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/js-mask"]
 	path = .vim/bundle/js-mask
 	url = https://github.com/brianc/js-mask
+[submodule ".vim/bundle/ctrlp"]
+	path = .vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim
