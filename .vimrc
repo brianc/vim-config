@@ -227,11 +227,24 @@ endfunction
 " }
 
 " Plugins {
-  " Lusty {
-    nmap <leader>b :LustyBufferExplorer<cr>
-    nmap <leader>j :LustyJuggler<cr>
-    nmap <leader>f :LustyFilesystemExplorer<cr>
-    nmap <leader>F :LustyFilesystemExplorerFromHere<cr>
+  " ctrlp {
+    nmap <leader>b :CtrlPBuffer<cr>
+    nmap <leader>j :CtrlPMRUFiles<cr>
+    nmap <leader>f :CtrlP<cr>
+    nmap <leader>F :CtrlPCurWD<cr>
+
+    if s:is_win
+      set wildignore+=.git\*,.hg\*,.svn\*,.bin\*,.obj\*         " for Windows
+    else
+      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*   " for Linux/MacOSX
+    end
+
+    let g:ctrlp_custom_ignore = {
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+      \ 'file': '\.exe$\|\.so$\|\.dll$',
+      \ 'link': 'bad_symbolic_link',
+      \ }
+
   " }
   " NerdTree {
     nmap <leader>t :NERDTreeToggle<cr>
