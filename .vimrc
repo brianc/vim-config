@@ -236,11 +236,11 @@ endfunction
     if s:is_win
       set wildignore+=.git\*,.hg\*,.svn\*,.bin\*,.obj\*,node_modules\*         " for Windows
     else
-      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules   " for Linux/MacOSX
+      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*   " for Linux/MacOSX
     end
 
     let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$\',
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$|node_modules$',
       \ 'file': '\.exe$\|\.so$\|\.dll$',
       \ 'link': 'bad_symbolic_link',
       \ }
