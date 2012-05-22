@@ -1,15 +1,12 @@
 set nocompatible " must be first line
-filetype plugin on
-filetype indent on
+
+runtime! bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+syntax on
+filetype plugin indent on
 
 let s:is_win = has('win32')
 let s:is_mac = has('mac')
-
-runtime! autoload/pathogen.vim
-silent! call pathogen#helptags()
-silent! call pathogen#runtime_append_all_bundles()
-
-
 
 let mapleader = ","
 let g:mapleader = ","
