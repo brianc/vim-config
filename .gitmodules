@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/vim-less"]
 	path = .vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less
+[submodule ".vim/bundle/vimux"]
+	path = .vim/bundle/vimux
+	url = https://github.com/benmills/vimux
