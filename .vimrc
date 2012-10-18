@@ -248,18 +248,18 @@ endfunction
   " }
   " vimux {
     " Prompt for a command to run
-    map rp :PromptVimTmuxCommand
+    map rp :PromptVimTmuxCommand<cr>
     
     " Run last command executed by RunVimTmuxCommand
-    map rl :RunLastVimTmuxCommand
+    map rl :RunLastVimTmuxCommand<cr>
     
     " Inspect runner pane
-    map ri :InspectVimTmuxRunner
+    map ri :InspectVimTmuxRunner<cr>
    
     " Close all other tmux panes in current window
-    map rx :CloseVimTmuxPanes
+    map rx :CloseVimTmuxPanes<cr>
    
     " Interrupt any command running in the runner pane
-    map rs :InterruptVimTmuxRunner"
+    map rs :InterruptVimTmuxRunner"<cr>
   " }
 " }
