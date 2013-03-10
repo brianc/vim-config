@@ -152,6 +152,7 @@ endfunction
   map <space> /
   map <c-space> ?
   map <silent> <leader><cr> :noh<cr>
+  map <c-w> :w<cr>
 
   " smart way to move between windows
   map <C-j> <C-W>j
