@@ -37,3 +37,9 @@
 [submodule ".vim/bundle/vim-less"]
 	path = .vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less
+[submodule ".vim/bundle/solarized"]
+	path = .vim/bundle/solarized
+	url = https://github.com/altercation/vim-colors-solarized
+[submodule ".vim/bundle/dustjs"]
+	path = .vim/bundle/dustjs
+	url = git://github.com/jimmyhchan/dustjs.vim.git

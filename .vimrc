@@ -78,7 +78,7 @@ if has("gui_running")
     set lines=999
     set columns=999
   elseif has('unix')
-    set guifont=Inconsolata\ 17
+    set guifont=Inconsolata\ 16
     set novisualbell
   end
 else
@@ -228,8 +228,8 @@ endfunction
   " ctrlp {
     nmap <leader>b :CtrlPBuffer<cr>
     nmap <leader>j :CtrlPMRUFiles<cr>
-    nmap <leader>f :CtrlP<cr>
-    nmap <leader>F :CtrlPCurWD<cr>
+    nmap <leader>f :CtrlPCurWD<cr>
+    nmap <leader>F :CtrlPRoot<cr>
 
     if s:is_win
       set wildignore+=.git\*,.hg\*,.svn\*,.bin\*,.obj\*,node_modules\*         " for Windows
