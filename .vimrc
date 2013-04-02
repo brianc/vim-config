@@ -150,7 +150,7 @@ endfunction
 
   " Map space to / (search) and c-space to ? (backwards search)
   map <space> /
-  map <c-space> ?
+  map <leader>s :w<cr>
   map <silent> <leader><cr> :noh<cr>
 
   " smart way to move between windows
