@@ -12,6 +12,7 @@ let mapleader = ","
 let g:mapleader = ","
 set visualbell
 
+set list listchars=tab:>-,trail:_,extends:>
 set history=700
 set ruler "Always show current position
 set hid "Change buffer - without saving
