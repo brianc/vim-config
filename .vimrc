@@ -154,6 +154,9 @@ endfunction
   map <leader>s :w<cr>
   map <silent> <leader><cr> :noh<cr>
 
+  " Fugative mapping
+  map <leader>g :Gstatus<cr>
+
   " smart way to move between windows
   map <C-j> <C-W>j
   map <C-k> <C-W>k
