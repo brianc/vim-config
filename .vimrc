@@ -228,6 +228,10 @@ endfunction
 " }
 
 " Plugins {
+  " python-mode {
+    let g:pymode_breakpoint = 0
+    let g:pymode_folding = 0
+  " }
   " ctrlp {
     nmap <leader>b :CtrlPBuffer<cr>
     nmap <leader>j :CtrlPMRUFiles<cr>
