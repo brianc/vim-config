@@ -241,7 +241,7 @@ endfunction
     if s:is_win
       set wildignore+=.git\*,.hg\*,.svn\*,.bin\*,.obj\*,node_modules\*,env\*         " for Windows
     else
-      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,.DS_Store,*/jam/*,*/env/*   " for Linux/MacOSX
+      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,.DS_Store,*/jam/*,*/env/*,*.pyc   " for Linux/MacOSX
     end
 
     let g:ctrlp_custom_ignore = {
