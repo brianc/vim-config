@@ -232,6 +232,7 @@ endfunction
   " python-mode {
     let g:pymode_breakpoint = 0
     let g:pymode_folding = 0
+    let g:pymode_lint_write = 0
   " }
   " ctrlp {
     nmap <leader>b :CtrlPBuffer<cr>
