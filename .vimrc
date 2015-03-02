@@ -130,7 +130,7 @@ endtry
 set laststatus=2
 
 " Format the statusline
-set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
+set statusline=%f%m%r%h\ %w\ %=\ Line:\ %l/%L:%c
 
 
 function! CurDir()
