@@ -12,7 +12,6 @@ let mapleader = ","
 let g:mapleader = ","
 set visualbell
 
-set list listchars=tab:>-,trail:_,extends:>
 set history=700
 set ruler "Always show current position
 set hid "Change buffer - without saving
@@ -147,7 +146,6 @@ endfunction
 " KeyMap {
   imap <c-a> <esc>0i
   imap <c-f> <right>
-  imap kj <esc>
   imap <C-BS> <C-W>
 
   " Map space to / (search) and c-space to ? (backwards search)
