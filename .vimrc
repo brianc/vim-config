@@ -46,6 +46,8 @@ set viewoptions=folds,options,cursor,unix,slash " better unix / windows compat
 set shortmess+=filmnrxoOtT "abbrev. of messages (avioids 'hit enter')
 set showmode
 
+" go style tabs for go
+" au BufNewFile,BufRead *.go setlocal noet ts=4 sw=4 sts=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -241,11 +243,11 @@ endfunction
     if s:is_win
       set wildignore+=.git\*,.hg\*,.svn\*,.bin\*,.obj\*,node_modules\*,env\*         " for Windows
     else
-      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,.DS_Store,*/jam/*,*/env/*,*.pyc,*/target/*   " for Linux/MacOSX
+      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*, */jspm_packages/*,.DS_Store,*/jam/*,*/env/*,*.pyc,*/target/*   " for Linux/MacOSX
     end
 
     let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$|node_modules$|target$',
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$|node_modules$|target$|jspm_packages',
       \ 'file': '\.exe$\|\.so$\|\.dll$|\DS_Store$',
       \ 'link': 'bad_symbolic_link',
       \ }
