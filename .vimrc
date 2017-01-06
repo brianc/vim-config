@@ -7,6 +7,7 @@ filetype plugin indent on
 
 let s:is_win = has('win32')
 let s:is_mac = has('mac')
+let g:vitality_always_assume_iterm = 1
 
 let mapleader = ","
 let g:mapleader = ","
@@ -241,13 +242,13 @@ endfunction
     nmap <leader>F :CtrlPRoot<cr>
 
     if s:is_win
-      set wildignore+=.git\*,.hg\*,.svn\*,.bin\*,.obj\*,node_modules\*,env\*         " for Windows
+      set wildignore+=.git\*,.hg\*,.svn\*,.bin\*,.obj\*,node_modules\*,env\*,dist\*         " for Windows
     else
-      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/jspm_packages/*,.DS_Store,*/jam/*,*/env/*,*.pyc,*/target/*   " for Linux/MacOSX
+      set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/jspm_packages/*,.DS_Store,*/jam/*,*/env/*,*.pyc,*/target/*,*/dist/*  " for Linux/MacOSX
     end
 
     let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$|node_modules$|target$|jspm_packages',
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$|node_modules$|target$|jspm_packages|dist',
       \ 'file': '\.exe$\|\.so$\|\.dll$|\DS_Store$',
       \ 'link': 'bad_symbolic_link',
       \ }
