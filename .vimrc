@@ -8,6 +8,7 @@ filetype plugin indent on
 let s:is_win = has('win32')
 let s:is_mac = has('mac')
 let g:vitality_always_assume_iterm = 1
+let g:jsx_ext_required = 0
 
 let mapleader = ","
 let g:mapleader = ","

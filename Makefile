@@ -1,8 +1,7 @@
 .PHONY: update install
 
 update:
-	git pull --recurse-submodules
-	git submodule update --recursive
+	./update.sh
 
 install: update
 	ln -s .vimrc ~
