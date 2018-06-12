@@ -10,6 +10,10 @@ let s:is_mac = has('mac')
 let g:vitality_always_assume_iterm = 1
 let g:jsx_ext_required = 0
 
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+
 let mapleader = ","
 let g:mapleader = ","
 set visualbell
